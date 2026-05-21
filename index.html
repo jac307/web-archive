@@ -1,0 +1,197 @@
+<!-- Token:
+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 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <title>Archive Library</title>
+
+  <style>
+    body {
+      font-family: Roboto, Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f9;
+      color: #222;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    .instructions {
+      background: white;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      background: white;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    a {
+      color: #007BFF;
+      word-break: break-all;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .empty {
+      color: #777;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Archive Library / Librería de Archivos</h1>
+
+  <div class="instructions">
+    <h3>Instructions</h3>
+    <ol>
+      <li>
+        Upload an image, video, or audio file through this Google Form:
+        <a href="https://forms.gle/MyWaLP872kWUYHx2A" target="_blank" rel="noopener noreferrer">
+          Upload form
+        </a>
+      </li>
+      <li>After submitting the form, wait a few minutes and refresh this page.</li>
+      <li>When your file appears below, copy the link and use it for performance.</li>
+    </ol>
+
+    <h3>Instrucciones</h3>
+    <ol>
+      <li>
+        Sube una imagen, video o audio en esta forma de Google:
+        <a href="https://forms.gle/MyWaLP872kWUYHx2A" target="_blank" rel="noopener noreferrer">
+          Forma para subir archivos
+        </a>
+      </li>
+      <li>Después de enviar la forma, espera unos minutos y refresca esta página.</li>
+      <li>Cuando tu archivo aparezca abajo, copia el enlace y úsalo para performance.</li>
+    </ol>
+  </div>
+
+  <h2>Images / Imágenes</h2>
+  <table id="images"></table>
+
+  <h2>Video</h2>
+  <table id="videos"></table>
+
+  <h2>Audio</h2>
+  <table id="audios"></table>
+
+  <script>
+    async function loadFileData() {
+      const response = await fetch("data/files.json?cache=" + Date.now());
+
+      if (!response.ok) {
+        throw new Error("Could not load data/files.json");
+      }
+
+      return await response.json();
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("El link ha sido copiado!");
+      }).catch(() => {
+        alert("No se pudo copiar automáticamente. Puedes copiar el link manualmente.");
+      });
+    }
+
+    function populateLinks(fileData, category, elementId) {
+      const fileList = fileData[category] || [];
+      const tableElement = document.getElementById(elementId);
+
+      tableElement.innerHTML = `
+        <tr>
+          <th>Nombre del Archivo</th>
+          <th>Link</th>
+          <th>Acción</th>
+        </tr>
+      `;
+
+      if (fileList.length === 0) {
+        const row = document.createElement("tr");
+        row.innerHTML = `<td colspan="3" class="empty">No files yet / Todavía no hay archivos.</td>`;
+        tableElement.appendChild(row);
+        return;
+      }
+
+      fileList.forEach(file => {
+        const row = document.createElement("tr");
+
+        const nameCell = document.createElement("td");
+        nameCell.textContent = file.name;
+
+        const linkCell = document.createElement("td");
+        const link = document.createElement("a");
+        link.href = file.url;
+        link.textContent = file.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        linkCell.appendChild(link);
+
+        const actionCell = document.createElement("td");
+        const copyButton = document.createElement("button");
+        copyButton.textContent = "Copiar Link";
+        copyButton.onclick = () => copyToClipboard(file.url);
+        actionCell.appendChild(copyButton);
+
+        row.appendChild(nameCell);
+        row.appendChild(linkCell);
+        row.appendChild(actionCell);
+
+        tableElement.appendChild(row);
+      });
+    }
+
+    async function init() {
+      try {
+        const fileData = await loadFileData();
+
+        populateLinks(fileData, "images", "images");
+        populateLinks(fileData, "videos", "videos");
+        populateLinks(fileData, "audios", "audios");
+      } catch (error) {
+        console.error(error);
+        alert("Could not load the file library.");
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>
