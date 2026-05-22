@@ -7,8 +7,25 @@
       "url": "https://jac307.github.io/web-archive/images/20260521-201244-usas4l-t1---jessica-rodriguez.jpg",
       "mimeType": "image/jpeg",
       "uploadedAt": "2026-05-22T00:12:45.693Z"
+    },
+    {
+      "name": "ai - Jessica Rodriguez.gif",
+      "storedName": "20260521-211211-b83qgf-ai---jessica-rodriguez.gif",
+      "path": "images/20260521-211211-b83qgf-ai---jessica-rodriguez.gif",
+      "url": "https://jac307.github.io/web-archive/images/20260521-211211-b83qgf-ai---jessica-rodriguez.gif",
+      "mimeType": "image/gif",
+      "uploadedAt": "2026-05-22T01:12:16.664Z"
     }
   ],
-  "videos": [],
+  "videos": [
+    {
+      "name": "espalda - Jessica Rodriguez.mp4",
+      "storedName": "20260521-211216-gx4gtg-espalda---jessica-rodriguez.mp4",
+      "path": "videos/20260521-211216-gx4gtg-espalda---jessica-rodriguez.mp4",
+      "url": "https://jac307.github.io/web-archive/videos/20260521-211216-gx4gtg-espalda---jessica-rodriguez.mp4",
+      "mimeType": "video/mp4",
+      "uploadedAt": "2026-05-22T01:12:25.937Z"
+    }
+  ],
   "audios": []
 }
