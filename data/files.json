@@ -1,5 +1,14 @@
 {
-  "images": [],
+  "images": [
+    {
+      "name": "T1 - Jessica Rodriguez.jpg",
+      "storedName": "20260521-201244-usas4l-t1---jessica-rodriguez.jpg",
+      "path": "images/20260521-201244-usas4l-t1---jessica-rodriguez.jpg",
+      "url": "https://jac307.github.io/web-archive/images/20260521-201244-usas4l-t1---jessica-rodriguez.jpg",
+      "mimeType": "image/jpeg",
+      "uploadedAt": "2026-05-22T00:12:45.693Z"
+    }
+  ],
   "videos": [],
   "audios": []
 }
