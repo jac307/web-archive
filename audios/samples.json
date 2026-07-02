@@ -1,6 +1,6 @@
 [
   { "url":"aou/00.wav","type":"audio","bank":"aou","n":0},
-  { "url":"aou/01.mp3","type":"audio","bank":"aou","n":1},
+  { "url":"aou/01.wav","type":"audio","bank":"aou","n":1},
   
   { "url":"boga/00.mp3","type":"audio","bank":"boga","n":0},
   { "url":"boga/01.mp3","type":"audio","bank":"boga","n":1},
