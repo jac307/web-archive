@@ -24,5 +24,41 @@
   { "url":"cy/07.wav","type":"audio","bank":"cy","n":7},
 
   { "url":"ro/00.wav","type":"audio","bank":"ro","n":0},
-  { "url":"ro/01.wav","type":"audio","bank":"ro","n":1}
+  { "url":"ro/01.wav","type":"audio","bank":"ro","n":1},
+
+  { "url":"laurie1/untitled-001.wav","type":"audio","bank":"laurie1","n":0},
+  { "url":"laurie1/untitled-002.wav","type":"audio","bank":"laurie1","n":1},
+  { "url":"laurie1/untitled-003.wav","type":"audio","bank":"laurie1","n":2},
+  { "url":"laurie1/untitled-004.wav","type":"audio","bank":"laurie1","n":3},
+  { "url":"laurie1/untitled-005.wav","type":"audio","bank":"laurie1","n":4},
+  { "url":"laurie1/untitled-006.wav","type":"audio","bank":"laurie1","n":5},
+  { "url":"laurie1/untitled-007.wav","type":"audio","bank":"laurie1","n":6},
+  { "url":"laurie1/untitled-008.wav","type":"audio","bank":"laurie1","n":7},
+  { "url":"laurie1/untitled-009.wav","type":"audio","bank":"laurie1","n":8},
+  { "url":"laurie1/untitled-010.wav","type":"audio","bank":"laurie1","n":9},
+  { "url":"laurie1/untitled-011.wav","type":"audio","bank":"laurie1","n":10},
+  { "url":"laurie1/untitled-012.wav","type":"audio","bank":"laurie1","n":11},
+  { "url":"laurie1/untitled-013.wav","type":"audio","bank":"laurie1","n":12},
+  { "url":"laurie1/untitled-014.wav","type":"audio","bank":"laurie1","n":13},
+  { "url":"laurie1/untitled-015.wav","type":"audio","bank":"laurie1","n":14},
+  { "url":"laurie1/untitled-016.wav","type":"audio","bank":"laurie1","n":15},
+
+  { "url":"laurie2/untitled-001.wav","type":"audio","bank":"laurie2","n":0},
+  { "url":"laurie2/untitled-002.wav","type":"audio","bank":"laurie2","n":1},
+  { "url":"laurie2/untitled-003.wav","type":"audio","bank":"laurie2","n":2},
+  { "url":"laurie2/untitled-004.wav","type":"audio","bank":"laurie2","n":3},
+  { "url":"laurie2/untitled-005.wav","type":"audio","bank":"laurie2","n":4},
+  { "url":"laurie2/untitled-006.wav","type":"audio","bank":"laurie2","n":5},
+  { "url":"laurie2/untitled-007.wav","type":"audio","bank":"laurie2","n":6},
+  { "url":"laurie2/untitled-008.wav","type":"audio","bank":"laurie2","n":7},
+  { "url":"laurie2/untitled-009.wav","type":"audio","bank":"laurie2","n":8},
+
+  { "url":"laurie3/untitled-001.wav","type":"audio","bank":"laurie3","n":0},
+  { "url":"laurie3/untitled-002.wav","type":"audio","bank":"laurie3","n":1},
+  { "url":"laurie3/untitled-003.wav","type":"audio","bank":"laurie3","n":2},
+  { "url":"laurie3/untitled-004.wav","type":"audio","bank":"laurie3","n":3},
+  { "url":"laurie3/untitled-005.wav","type":"audio","bank":"laurie3","n":4},
+  { "url":"laurie3/untitled-006.wav","type":"audio","bank":"laurie3","n":5},
+  { "url":"laurie3/untitled-007.wav","type":"audio","bank":"laurie3","n":6},
+  { "url":"laurie3/untitled-008.wav","type":"audio","bank":"laurie3","n":7}
 ]
